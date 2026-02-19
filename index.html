@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Content Cove</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Inter;background:#0b0b0c;color:#eee}
+
+/* NAVBAR */
+nav{
+position:fixed;width:100%;padding:25px 8%;
+display:flex;justify-content:space-between;
+background:rgba(0,0,0,.35);backdrop-filter:blur(8px);z-index:999}
+nav ul{display:flex;gap:35px;list-style:none}
+nav a{color:#aaa;text-decoration:none}
+nav a.active, nav a:hover{color:#fff}
+.logo{font-family:"Playfair Display";font-size:26px}
+
+/* HERO */
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 15%}
+.hero h1{font-family:"Playfair Display";font-size:70px}
+.hero p{margin:30px 0;color:#aaa}
+.btn{
+padding:14px 34px;
+border:1px solid #fff;
+color:#fff;
+background:transparent;
+text-decoration:none;
+cursor:pointer;
+font-family:Inter;
+font-size:15px;
+transition:.4s;
+}
+
+.btn:hover{
+background:#fff;
+color:#000;
+}
+
+
+/* SECTIONS */
+.section{padding:120px 10%;opacity:0;transform:translateY(40px);transition:1s}
+.section.show{opacity:1;transform:translateY(0)}
+.title{font-family:"Playfair Display";font-size:42px;margin-bottom:60px}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px}
+.card{border:1px solid #222;padding:45px}
+.card:hover{border:1px solid #fff}
+
+/* PORTFOLIO */
+.portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px}
+.work{height:300px;background:#151515;display:flex;align-items:center;justify-content:center;font-family:"Playfair Display";font-size:24px}
+.work:hover{background:#fff;color:#000}
+
+/* STATS */
+.stats{display:flex;justify-content:space-around;text-align:center}
+.stat h2{font-size:48px;font-family:"Playfair Display"}
+
+/* TESTIMONIALS */
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.testimonial{border:1px solid #222;padding:30px;color:#aaa}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid #222;padding:20px 0;cursor:pointer}
+.faq-answer{display:none;color:#aaa;padding-top:10px}
+
+/* CONTACT */
+.contact{text-align:center}
+input,textarea{width:100%;padding:15px;margin:10px 0;background:#111;border:1px solid #333;color:#fff}
+
+/* WHATSAPP */
+.whatsapp{position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;padding:16px;border-radius:50%;text-decoration:none}
+footer{text-align:center;padding:40px;color:#777}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">The Content Cove</div>
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">Instagram</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div>
+<h1>Luxury Social Media Design</h1>
+<p>We turn brands into icons.</p>
+<a href="#contact" class="btn">Start Project</a>
+</div>
+</section>
+
+<section class="section" id="services">
+<h2 class="title">Services</h2>
+<div class="services">
+<div class="card"><h3>Branding</h3><p>Premium Instagram identities.</p></div>
+<div class="card"><h3>Content</h3><p>Luxury posts & ads.</p></div>
+<div class="card"><h3>Strategy</h3><p>Growth & positioning.</p></div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="title">Our Impact</h2>
+<div class="stats">
+<div class="stat"><h2 id="c1">0</h2><p>Brands Helped</p></div>
+<div class="stat"><h2 id="c2">0</h2><p>Million Reach</p></div>
+<div class="stat"><h2 id="c3">0</h2><p>Years Experience</p></div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="title">Testimonials</h2>
+<div class="testimonials">
+<div class="testimonial">“Our Instagram looks premium now!”</div>
+<div class="testimonial">“Best design agency we worked with.”</div>
+<div class="testimonial">“Sales increased within 2 months.”</div>
+</div>
+</section>
+
+<section class="section" id="pricing">
+<h2 class="title">Pricing</h2>
+<p>Starter ₹15k • Growth ₹30k • Premium ₹55k</p>
+</section>
+
+<section class="section">
+<h2 class="title">FAQ</h2>
+<div class="faq-item">How fast do we start?<div class="faq-answer">Within 48 hours.</div></div>
+<div class="faq-item">Do you work worldwide?<div class="faq-answer">Yes, globally.</div></div>
+<div class="faq-item">Contract period?<div class="faq-answer">Minimum 1 month.</div></div>
+</section>
+
+<section class="section contact" id="contact">
+<h2 class="title">Contact</h2>
+<form action="mailto:hello@thecontentcove.com" method="post" enctype="text/plain">
+<input type="text" placeholder="Name" required>
+<input type="email" placeholder="Email" required>
+<textarea rows="5" placeholder="Tell us about your brand"></textarea>
+<button class="btn">Send Email</button>
+</form>
+</section>
+
+<footer>© 2026 The Content Cove</footer>
+<a class="whatsapp" href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank">💬</a>
+
+<script>
+// Scroll animation
+const sections=document.querySelectorAll(".section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+if(sec.getBoundingClientRect().top<window.innerHeight-100)
+sec.classList.add("show")
+})
+});
+
+// Stats counter
+let started=false;
+window.addEventListener("scroll",()=>{
+if(!started && document.getElementById("c1").getBoundingClientRect().top<window.innerHeight){
+started=true;
+let a=0,b=0,c=0;
+let int=setInterval(()=>{
+a++;b+=2;c+=0.1;
+document.getElementById("c1").innerText=a+"+";
+document.getElementById("c2").innerText=b+"+";
+document.getElementById("c3").innerText=c.toFixed(1)+"+";
+if(a==120) clearInterval(int);
+},20);
+}
+});
+
+// FAQ toggle
+document.querySelectorAll(".faq-item").forEach(item=>{
+item.onclick=()=>item.querySelector(".faq-answer").style.display="block";
+});
+</script>
+
+</body>
+</html>
